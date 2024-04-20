@@ -1,0 +1,23 @@
+<div style="text-align: center">
+  <nav style="">
+    <ul style="list-style: none; display: flex; gap: 1rem; justify-content: center">
+      <li><a routerLink="/page-a">Go to Page A - Host</a></li>
+      <li><a routerLink="/authentication/page-c">Go to Page C</a></li>
+      <li><a routerLink="/authentication/page-d">Go to Page D</a></li>
+      <li><a routerLink="/home/page-e">Go to Page E</a></li>
+    </ul>
+  </nav>
+  <h1>{{ title() }} with Angular v{{ ngVersion() }}</h1>
+  <p>BDS v{{ bdsVersion() }}</p>
+
+  <button (click)="navigateTo('/page-b')">
+    <span>Go to page B</span>
+  </button>
+
+  <button (click)="navigateTo('/home/page-f')">
+    <span>Go to page F</span>
+  </button>
+  <div class="bc-mt-5" style="border: 5px solid goldenrod; padding: 1rem">
+    <router-outlet/>
+  </div>
+</div>

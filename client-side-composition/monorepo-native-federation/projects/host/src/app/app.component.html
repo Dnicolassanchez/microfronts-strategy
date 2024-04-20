@@ -1,0 +1,28 @@
+<div style="text-align: center">
+  <nav class="flex justify-content-center">
+    <ul style="list-style: none; display: flex">
+      <li>
+        <p-button [link]="true" routerLink="/">Page A - Host</p-button>
+      </li>
+      <li>
+        <p-button [link]="true" routerLink="/page-b">Page B - Host</p-button>
+      </li>
+      <li>
+        <p-button [link]="true" routerLink="/authentication">Page C - Auth</p-button>
+      </li>
+      <li>
+        <p-button [link]="true" routerLink="/authentication/page-d">Page D - Auth</p-button>
+      </li>
+    </ul>
+  </nav>
+
+  <h1>{{ title() }} with Angular v{{ ngVersion() }}</h1>
+  <p>PrimeNG v{{ bdsVersion() }}</p>
+  <button class="mb-4" pButton (click)="toggleTheme()">
+    <i class="pi pi-times"></i>
+    <span>Change theme</span>
+  </button>
+  <div class="bc-mt-5" style="border: 5px solid salmon; padding: 1rem">
+    <router-outlet></router-outlet>
+  </div>
+</div>

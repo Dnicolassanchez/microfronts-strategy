@@ -1,0 +1,30 @@
+<div class="text-center">
+  <nav class="flex justify-content-center">
+    <ul style="list-style: none; display: flex">
+      <li>
+        <p-button [link]="true" routerLink="/">Page A</p-button>
+      </li>
+      <li>
+        <p-button [link]="true" routerLink="/page-b">Page B</p-button>
+      </li>
+      <li>
+        <p-button [link]="true" routerLink="/authentication/page-c">Go to auth</p-button>
+      </li>
+      <li>
+        <p-button [link]="true" routerLink="/home/page-e">Go to home</p-button>
+      </li>
+    </ul>
+  </nav>
+
+  <h1>{{ title() }} with Angular v{{ ngVersion() }}</h1>
+  <p>PrimeNG v{{ bdsVersion() }}</p>
+
+  <button pButton class="mb-4">
+    <i class="pi pi-check"></i>
+    <span>Test</span>
+  </button>
+
+  <div class="bc-mt-5" style="border: 5px solid salmon; padding: 1rem">
+    <router-outlet></router-outlet>
+  </div>
+</div>
